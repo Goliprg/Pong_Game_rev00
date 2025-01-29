@@ -23,7 +23,7 @@ computer_paddle.goto(385,-170)
 ball = Ball()
 screen.update()
 screen.tracer(1)
-moving_angle = choice([x for x in range(0, 361) if x not in (range(40, 140) and range(220, 320))])
+moving_angle = choice([x for x in range(0, 361) if x not in range(45, 135) and x not in range(225, 315)])
 flag_move_up = 1
 computer_score = ComputerScore()
 user_score = UserScore()
@@ -47,12 +47,12 @@ while game_on:
       game_on = computer_score.score_update()
       ball.home()
       time.sleep(1)
-      moving_angle = choice([x for x in range(0, 361) if x not in ( range(40, 140) and range(220,320))])
+      moving_angle = choice([x for x in range(0, 361) if x not in range(45, 135) and x not in range(225, 315)])
    elif ball.xcor()> 390:
       game_on = user_score.score_update()
       ball.home()
       time.sleep(1)
-      moving_angle = choice([x for x in range(0, 361) if x not in (range(40, 140) and range(220, 320))])
+      moving_angle = choice([x for x in range(0, 361) if x not in range(45, 135) and x not in range(225, 315)])
 
    if ball.ycor()>= 185 or ball.ycor() <= -180:
       last_moving_angle = moving_angle
